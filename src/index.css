@@ -1,5 +1,38 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .gallows {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .word {
+    font-size: 24px;
+    letter-spacing: 5px;
+    margin: 20px 0;
+  }
+  
+  .letters {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    gap: 5px;
+    margin-top: 20px;
+  }
+  
+  .letter-button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .letter-button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
