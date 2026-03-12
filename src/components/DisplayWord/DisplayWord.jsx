@@ -1,4 +1,4 @@
-
+import "./DisplayWord.css"
 
 
 export const DisplayWord = ({displayWord, randomWord}) => {

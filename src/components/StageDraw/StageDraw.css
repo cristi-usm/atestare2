@@ -1,0 +1,22 @@
+.stage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: fit-content;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border: 2px solid #333;
+}
+
+.ascii-art {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.2rem;
+    line-height: 1.1;
+    color: #00ff88;
+    white-space: pre;
+    margin: 0;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 255, 136, 0.2);
+}

@@ -1,13 +1,13 @@
 
 import  { letters } from "../../constants/letters"
-
+import "./LettersArray.css"
 
 export const LettersArray = ({guessedLetters, onLetterClick}) => {
 
 
 
     return (
-        <div style={{gap: "5px" }}>
+        <div className="letters-container">
             {letters.map((l) => {
                 const isPressed = guessedLetters.includes(l);
 
@@ -19,7 +19,7 @@ export const LettersArray = ({guessedLetters, onLetterClick}) => {
                         style={{
                             padding: "10px",
                             cursor: isPressed ? "not-allowed" : "pointer",
-                            backgroundColor: isPressed ? "#ccc" : "black",
+                            backgroundColor: isPressed ? "#ccc" : "#6A7282",
                             color: "white",
                             border: "none",
                             borderRadius: "4px"

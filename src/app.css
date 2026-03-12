@@ -1,0 +1,55 @@
+/* Resetare de bază pentru a elimina marginile browserului */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Fundal alb curat */
+    color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Containerul principal al aplicației */
+.app-container {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Stil pentru titlurile de stare (Win/Lose) */
+h2 {
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Mesajul care arată cuvântul la final */
+p {
+    margin-top: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Stilul pentru butonul de acțiune (simplu) */
+.action-button {
+    margin-top: 25px;
+    padding: 8px 20px;
+    background: none;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    text-transform: uppercase;
+}
+
+.action-button:hover {
+    background: #000;
+    color: #fff;
+}

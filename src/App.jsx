@@ -4,6 +4,7 @@ import { StageDraw } from "./components/StageDraw/StageDraw";
 import stages from "./constants/stages.json"
 import words from "./constants/words.json"
 import { DisplayWord } from "./components/DisplayWord/DisplayWord";
+import "./app.css"
 
 function App() {
 
@@ -48,7 +49,7 @@ function App() {
         
     }
 
-    return <>
+    return <div className="app-container">
 <div style={{ textAlign: "center", padding: "20px" }}>
             {lose && (
                 <div style={{ color: "red" }}>
@@ -75,14 +76,14 @@ function App() {
             )}
 
             <br />
-            <button onClick={pickNewWord} style={{ marginTop: "20px" }}>
+            <button className="action-button" onClick={pickNewWord} style={{ marginTop: "20px" }}>
                 {win || lose ? "Try Again" : "New Word"}
             </button>
         </div>
 
     
     
-    </>;
+    </div>;
 }
 
 export default App;

@@ -1,0 +1,31 @@
+.letters-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.letter-button {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    background-color: #000;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.letter-button:hover:not(:disabled) {
+    background-color: #333;
+}
+
+.letter-button:disabled {
+    background-color: #eee;
+    color: #bbb;
+    cursor: not-allowed;
+}
