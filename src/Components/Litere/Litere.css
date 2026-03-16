@@ -1,0 +1,35 @@
+.litereContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    max-width: 620px;
+}
+
+.literaBtn {
+    width: 52px;
+    height: 52px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #ffffff;
+    border: 2px solid #cccccc;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.literaBtn.corecta {
+    background-color: #d0d0d0;
+    border-color: #999999;
+    color: #999999;
+}
+
+.literaBtn.gresita {
+    background-color: #d0d0d0;
+    border-color: #999999;
+    color: #999999;
+}
+
+.literaBtn:disabled {
+    cursor: default;
+}

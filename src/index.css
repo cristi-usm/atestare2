@@ -3,3 +3,29 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 40px 16px;
+    width: 100%;
+}
+
+.btnRestart {
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;;
+    border: #333;;
+    border-radius: 2px;
+    cursor: pointer;
+}

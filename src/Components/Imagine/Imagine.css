@@ -1,0 +1,11 @@
+.imaginea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imaginea img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+}
