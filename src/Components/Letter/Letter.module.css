@@ -1,0 +1,25 @@
+.letter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: black;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  height: 70px;
+  width: 55px;
+}
+
+.letterSelected {
+  cursor: not-allowed;
+  color: #999;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  height: 70px;
+  width: 55px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
