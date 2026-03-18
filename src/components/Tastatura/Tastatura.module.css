@@ -1,0 +1,28 @@
+.root {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    gap: 5px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+.restartButton {
+    padding: 15px 40px;
+    background-color: #e74c3c;
+    border: 2px solid #c0392b;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+}
+
+.restartButton:hover {
+    background-color: #c0392b;
+}

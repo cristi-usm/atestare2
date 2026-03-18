@@ -1,4 +1,4 @@
-export const words = [
+const words = [
     "PLENTY",
     "ACHIEVE",
     "CLASS",
@@ -50,3 +50,4 @@ export const words = [
     "RESPECT",
     "SAFELY",
 ];
+export default words;

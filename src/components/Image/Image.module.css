@@ -1,0 +1,19 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.Image {
+    width: 300px;
+    height: auto;
+}
+
+.final {
+    text-align: center;
+    color: #e74c3c;
+    font-size: 32px;
+    margin: 20px 0;
+    font-weight: bold;
+}

@@ -1,4 +1,4 @@
-export const stages = [
+ const stages = [
     "https://i.imgur.com/kReMv94.png",
     "https://i.imgur.com/UFP8RM4.png",
     "https://i.imgur.com/9McnEXg.png",
@@ -8,3 +8,4 @@ export const stages = [
     "https://i.imgur.com/CtvIEMS.png",
     "https://i.imgur.com/Z2mPdX0.png",
 ];
+export default stages

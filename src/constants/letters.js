@@ -1,4 +1,4 @@
-export const letters = [
+ const letters = [
     "A",
     "B",
     "C",
@@ -25,3 +25,6 @@ export const letters = [
     "X",
     "Y",
 ];
+
+
+export default letters;
