@@ -1,106 +1,48 @@
-import { useState } from "react";
+import React from "react";
 import Imagine from "./Components/Imagine/Imagine";
-import Cuvantul from "./Components/Cuvantul/Cuvantul";
 import Litere from "./Components/Litere/Litere";
+import Cuvantul from "./Components/Cuvantul/Cuvantul";
+import {words} from "./constants/words";
+import { useState } from "react";
 
-import { letters } from "./constants/letters";
-import { stages } from "./constants/stages";
-import { words } from "./constants/words";
-
-function getCuvantAleatoriu() {
-    const indexAleatoriu = Math.floor(Math.random() * words.length);
-    return words[indexAleatoriu];
-}
-
-function App() {
-    const [cuvant, setCuvant] = useState(getCuvantAleatoriu);
+function App(){
+    const cuvintRandom = Math.floor(Math.random() * words.length);
     const [litereGhicite, setLitereGhicite] = useState([]);
+    const [literaApasata, setLiteraApasata] = useState("");
+    const [gresit, setGresit] = useState(0);
+    const [cuvintDinLista, setCuvintDinLista] = useState(words[cuvintRandom]);
+    console.log(cuvintDinLista);
+    console.log(literaApasata);
+    console.log(litereGhicite);
 
-    const litereGresite = [];
-    for (let i = 0; i < litereGhicite.length; i++) {
-        const litera = litereGhicite[i];
-        if (cuvant.includes(litera) === false) {
-            litereGresite.push(litera);
+   function verifLitera(litera){
+        setLitereGhicite([...litereGhicite, litera]);
+        setLiteraApasata(litera);
+        if (!cuvintDinLista.includes(litera)){
+            setGresit(gresit => gresit + 1);
         }
     }
+    console.log(gresit);
 
-    const numarGreseli = litereGresite.length;
-    
-    let indexImagine = numarGreseli;
-    if (numarGreseli >= stages.length) {
-        indexImagine = stages.length - 1;
-    }
-    const imagineCurenta = stages[indexImagine];
+    const litereleCorecte = litereGhicite.filter(l => cuvintDinLista.includes(l));
+    const castigat = litereleCorecte.length === cuvintDinLista.length;
+    const jocTerminat = gresit >= 7;
 
-    let estePierdut = false;
-    if (numarGreseli >= stages.length - 1) {
-        estePierdut = true;
-    }
-
-    const litereleDinCuvant = cuvant.split("");
-    let esteCastigat = true;
-    for (let i = 0; i < litereleDinCuvant.length; i++) {
-        const litera = litereleDinCuvant[i];
-        if (litereGhicite.includes(litera) === false) {
-            esteCastigat = false;
-        }
-    }
-
-    let jocTerminat = false;
-    if (estePierdut === true || esteCastigat === true) {
-        jocTerminat = true;
-    }
-
-    function handleApasareLitera(literaApasata) {
-        if (jocTerminat === true) {
-            return;
-        }
-
-        setLitereGhicite(function(listaDePanaAcum) {
-            return [...listaDePanaAcum, literaApasata];
-        });
-    }
-
-    function handleRestart() {
-        setCuvant(getCuvantAleatoriu());
+    function handleClick(){
+        setLiteraApasata("");
         setLitereGhicite([]);
+        setGresit(0);
+        setCuvintDinLista(words[cuvintRandom]);
     }
-
-    return (
-        <div className="app">
-            {esteCastigat === true && (
-                <p className="mesajCastigat">Ai cistigat!</p>
-            )}
-            
-            {estePierdut === true && (
-                <p className="mesajPierdut">Ai pierdut!</p>
-            )}
-
-            <Imagine src={imagineCurenta} />
-
-            <Cuvantul
-                cuvant={cuvant}
-                litereGhicite={litereGhicite}
-                jocTerminat={estePierdut}
-            />
-
-            {jocTerminat === false && (
-                <Litere
-                    litere={letters}
-                    litereGhicite={litereGhicite}
-                    cuvant={cuvant}
-                    laApasareLitera={handleApasareLitera}
-                    jocTerminat={jocTerminat}
-                />
-            )}
-
-            {jocTerminat === true && (
-                <button className="btnRestart" onClick={handleRestart}>
-                    INCEARCA DIN NOU
-                </button>
-            )}
-        </div>
-    );
+    
+    return(
+        <>
+            {jocTerminat && <h2>Ai pierdut</h2>}
+            {castigat && <h2>Ai cistigat</h2>}
+           <Imagine gresit={gresit}/> 
+           <Cuvantul fiecareCuvint={cuvintDinLista} litereGhicite={litereGhicite} jocTerminat={jocTerminat}/>
+           <Litere litereGhicite={litereGhicite} gresit={gresit} handleClick={handleClick} onClick={verifLitera} />
+        </>
+    )
 }
-
-export default App;
+export default App

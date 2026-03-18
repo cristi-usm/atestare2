@@ -1,35 +1,17 @@
-.litereContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    max-width: 620px;
+.litere {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .literaBtn {
-    width: 52px;
-    height: 52px;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: #ffffff;
-    border: 2px solid #cccccc;
-    border-radius: 10px;
-    cursor: pointer;
+  margin: 5px;
 }
 
-.literaBtn.corecta {
-    background-color: #d0d0d0;
-    border-color: #999999;
-    color: #999999;
-}
-
-.literaBtn.gresita {
-    background-color: #d0d0d0;
-    border-color: #999999;
-    color: #999999;
-}
-
-.literaBtn:disabled {
-    cursor: default;
+.btnDinNou{
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
 }

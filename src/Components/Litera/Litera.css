@@ -1,0 +1,10 @@
+.literaBtn {
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 16px;
+
+}
+
+.literaBtn.activ {
+  color: red;
+}
